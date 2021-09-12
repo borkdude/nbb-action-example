@@ -9,5 +9,5 @@ outputs:
   time: # id of output
     description: 'The time we greeted you'
 runs:
-  using: 'node14'
-  main: 'dist/index.mjs'
+  using: 'node12'
+  main: 'index.mjs'
