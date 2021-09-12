@@ -1,6 +1,6 @@
 (ns action
-  (:require ["@actions/core$default" :as core]
-            ["@actions/github$default" :as github]))
+  (:require ["@actions/core" :as core]
+            ["@actions/github" :as github]))
 
 (try
   (let [name-to-greet (.getInput core "who-to-greet")
