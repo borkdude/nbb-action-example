@@ -3,5 +3,6 @@ import { resolve, dirname } from 'path';
 import { fileURLToPath } from 'url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-console.log(resolve('action.cljs'));
-await loadFile('action.cljs');
+const theFile = resolve(__dirname,'action.cljs');
+console.log(theFile);
+await loadFile(theFile);
