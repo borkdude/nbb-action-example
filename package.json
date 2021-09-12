@@ -19,6 +19,7 @@
   "homepage": "https://github.com/borkdude/nbb-test-action#readme",
   "dependencies": {
     "@actions/core": "^1.5.0",
-    "@actions/github": "^5.0.0"
+    "@actions/github": "^5.0.0",
+    "nbb": "^0.0.71"
   }
 }
