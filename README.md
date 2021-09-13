@@ -21,3 +21,23 @@ Because Github actions uses an old version of Node.js (12), we can't run ES
 modules yet. Because `nbb` is an ES module, for now we need Docker to run a
 newer version of Node.js. That should not be needed once Github allows running a
 newer version of Node.js in actions.
+
+## Inputs
+
+## `who-to-greet`
+
+**Required** The name of the person to greet. Default `"World"`.
+
+## Outputs
+
+## `time`
+
+The time we greeted you.
+
+## Example usage
+
+```
+uses: borkdude/nbb-action-example@main
+with:
+  who-to-greet: 'Mona the Octocat'
+```
