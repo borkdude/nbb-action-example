@@ -7,8 +7,8 @@ This action prints "Hello World" or "Hello" + the name of a person to greet to t
 
 It was created using
 [this](https://docs.github.com/en/actions/creating-actions/creating-a-javascript-action)
-tutorial but instead of JavaScript it uses a small JS wrapper (see
-`index.mjs`). The actual scripting is done in `action.cljs`.
+tutorial but instead of JavaScript it uses a small JS wrapper (see `index.mjs`)
+and the actual scripting is done in `action.cljs`.
 
 All JS dependencies, including nbb, are compiled into a single file,
 `dist/index.mjs`, using [ncc](https://github.com/vercel/ncc/). This is
