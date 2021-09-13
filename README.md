@@ -41,3 +41,7 @@ uses: borkdude/nbb-action-example@main
 with:
   who-to-greet: 'Mona the Octocat'
 ```
+
+## Develop
+
+See `bb tasks` for relevant tasks for development.
