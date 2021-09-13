@@ -21,6 +21,6 @@
   "dependencies": {
     "@actions/core": "^1.5.0",
     "@actions/github": "^5.0.0",
-    "nbb": "file://Users/borkdude/Dropbox/dev/clojure/nbb"
+    "nbb": "^0.0.72"
   }
 }
