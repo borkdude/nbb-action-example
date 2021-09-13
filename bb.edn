@@ -1,0 +1,2 @@
+{:tasks
+ {build (shell "ncc build index.mjs --license licenses.txt")}}
