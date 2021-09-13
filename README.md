@@ -17,10 +17,11 @@ into git. Because `ncc` needs to statically know which dependencies are
 required, this is done in the `index.mjs` wrapper and not inside the
 `action.cljs` script.
 
-Because Github actions uses an old version of Node.js (12), we can't run ES
-modules yet. Because `nbb` is an ES module, for now we need Docker to run a
-newer version of Node.js. That should not be needed once Github allows running a
-newer version of Node.js in actions.
+Because Github actions uses an old version of Node.js (12) (see
+[issue](https://github.com/actions/runner/issues/772)), we can't run ES modules
+yet. Because `nbb` is an ES module, for now we need Docker to run a newer
+version of Node.js. That should not be needed once Github allows running a newer
+version of Node.js in actions.
 
 ## Inputs
 
