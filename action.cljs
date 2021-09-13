@@ -1,16 +1,18 @@
 (ns action)
 
-(defn action [core github]
+(defn action
+  ;; deps injected by index.mjs
+  [actionsCore actionsGithub]
   (try
-    (let [name-to-greet (.getInput core "who-to-greet")
+    (let [name-to-greet (.getInput actionsCore "who-to-greet")
           _ (.log js/console (str "Hello " name-to-greet "!"))
           time (.toTimeString (js/Date.))
-          _ (.setOutput core "time" time)
-          payload (.. github -context -payload)
+          _ (.setOutput actionsCore "time" time)
+          payload (.. actionsGithub -context -payload)
           payload (js/JSON.stringify payload nil 2)
           _ (.log js/console (str "The event payload: " payload))])
     (catch :default e
-      (.setFailed core (.-message e)))))
+      (.setFailed actionsCore (.-message e)))))
 
 ;; exports:
 #js {:action action}
