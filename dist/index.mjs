@@ -40,7 +40,7 @@ __nccwpck_require__.a(__webpack_module__, async (__webpack_handle_async_dependen
 
 const __dirname = (0,path__WEBPACK_IMPORTED_MODULE_1__.dirname)((0,url__WEBPACK_IMPORTED_MODULE_2__.fileURLToPath)("file:///private/tmp/nbb-test-action/index.mjs"));
 const theFile = __nccwpck_require__.ab + "action.cljs";
-const action = await (0,nbb__WEBPACK_IMPORTED_MODULE_0__/* .loadFile */ .x)(__nccwpck_require__.ab + "action.cljs");
+const { action } = await (0,nbb__WEBPACK_IMPORTED_MODULE_0__/* .loadFile */ .x)(__nccwpck_require__.ab + "action.cljs");
 action(/*#__PURE__*/ (_actions_core__WEBPACK_IMPORTED_MODULE_3___namespace_cache || (_actions_core__WEBPACK_IMPORTED_MODULE_3___namespace_cache = __nccwpck_require__.t(_actions_core__WEBPACK_IMPORTED_MODULE_3__, 2))),/*#__PURE__*/ (_actions_github__WEBPACK_IMPORTED_MODULE_4___namespace_cache || (_actions_github__WEBPACK_IMPORTED_MODULE_4___namespace_cache = __nccwpck_require__.t(_actions_github__WEBPACK_IMPORTED_MODULE_4__, 2))));
 
 __webpack_handle_async_dependencies__();
