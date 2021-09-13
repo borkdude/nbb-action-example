@@ -12,10 +12,10 @@ actual CLJS script `action.cljs`.
 
 All JS dependencies, including nbb, are compiled into a single file,
 `dist/index.mjs`, using [ncc](https://github.com/vercel/ncc/). This is
-recommended in the Github docs as an alternative to commit your `node_modules`
-into git. Because `ncc` needs to statically know which dependencies are
-required, this is done in the `index.mjs` wrapper and not inside the
-`action.cljs` script.
+recommended in the Github docs as an alternative to commiting your
+`node_modules` into git. Because `ncc` needs to statically know which
+dependencies are required, this is done in the `index.mjs` wrapper and not
+inside the `action.cljs` script.
 
 Because Github actions uses an old version of Node.js (12) (see
 [issue](https://github.com/actions/runner/issues/772)), we can't run ES modules
