@@ -37,7 +37,7 @@ The time we greeted you.
 
 ## Example usage
 
-```
+``` yaml
 on: [push]
 
 jobs:
