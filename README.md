@@ -47,7 +47,7 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello
-        uses: borkdude/nbb-test-action@v0.0.2
+        uses: borkdude/nbb-action-example@v0.0.2
         with:
           who-to-greet: 'Mona the Octocat'
       # Use the output from the `hello` step
