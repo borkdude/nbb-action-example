@@ -4,8 +4,6 @@ import { fileURLToPath } from 'url';
 import * as actionsCore from '@actions/core';
 import * as actionsGithub from '@actions/github';
 
-console.log(process.version);
-
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const theFile = resolve(__dirname,'action.cljs');
 const { action } = await loadFile(theFile);
