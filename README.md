@@ -38,9 +38,21 @@ The time we greeted you.
 ## Example usage
 
 ```
-uses: borkdude/nbb-action-example@main
-with:
-  who-to-greet: 'Mona the Octocat'
+on: [push]
+
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: A job to say hello
+    steps:
+      - name: Hello world action step
+        id: hello
+        uses: borkdude/nbb-test-action@v0.0.1
+        with:
+          who-to-greet: 'Mona the Octocat'
+      # Use the output from the `hello` step
+      - name: Get the output time
+        run: echo "The time was ${{ steps.hello.outputs.time }}"
 ```
 
 ## Develop
