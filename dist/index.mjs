@@ -38,8 +38,6 @@ __nccwpck_require__.a(__webpack_module__, async (__webpack_handle_async_dependen
 
 
 
-console.log(process.version);
-
 const __dirname = (0,path__WEBPACK_IMPORTED_MODULE_1__.dirname)((0,url__WEBPACK_IMPORTED_MODULE_2__.fileURLToPath)("file:///Users/borkdude/temp/nbb-action-example/index.mjs"));
 const theFile = __nccwpck_require__.ab + "action.cljs";
 const { action } = await (0,nbb__WEBPACK_IMPORTED_MODULE_0__/* .loadFile */ .x)(__nccwpck_require__.ab + "action.cljs");
