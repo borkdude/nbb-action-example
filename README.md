@@ -15,13 +15,13 @@ All JS dependencies, including nbb, are compiled into a single file,
 recommended in the Github docs as an alternative to commiting your
 `node_modules` into git. Because `ncc` needs to statically know which
 dependencies are required, this is done in the `index.mjs` wrapper and not
-inside the `action.cljs` script.
+inside the `action.cljs` script. The dependencies are then passed as parameters
+into a function defined in `action.cljs`.
 
 Because Github actions uses an old version of Node.js (12) (see
-[issue](https://github.com/actions/runner/issues/772)), we can't run ES modules
-yet. Because `nbb` is an ES module, for now we need Docker to run a newer
-version of Node.js. That should not be needed once Github allows running a newer
-version of Node.js in actions.
+[issue](https://github.com/actions/runner/issues/772)), the action currently
+uses a workaround in `run.cjs`: it forks to the system-wide installed version of
+Node.js which is `14.17.6` at this time of writing.
 
 ## Inputs
 
