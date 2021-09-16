@@ -24,24 +24,22 @@ module.exports = webpackEmptyAsyncContext;
 /***/ ((__webpack_module__, __unused_webpack___webpack_exports__, __nccwpck_require__) => {
 
 "use strict";
-var _actions_core__WEBPACK_IMPORTED_MODULE_3___namespace_cache;
-var _actions_github__WEBPACK_IMPORTED_MODULE_4___namespace_cache;
+var _actions_core__WEBPACK_IMPORTED_MODULE_2___namespace_cache;
+var _actions_github__WEBPACK_IMPORTED_MODULE_3___namespace_cache;
 __nccwpck_require__.a(__webpack_module__, async (__webpack_handle_async_dependencies__) => {
 /* harmony import */ var nbb__WEBPACK_IMPORTED_MODULE_0__ = __nccwpck_require__(991);
 /* harmony import */ var path__WEBPACK_IMPORTED_MODULE_1__ = __nccwpck_require__(622);
-/* harmony import */ var url__WEBPACK_IMPORTED_MODULE_2__ = __nccwpck_require__(835);
-/* harmony import */ var _actions_core__WEBPACK_IMPORTED_MODULE_3__ = __nccwpck_require__(127);
-/* harmony import */ var _actions_github__WEBPACK_IMPORTED_MODULE_4__ = __nccwpck_require__(134);
+/* harmony import */ var _actions_core__WEBPACK_IMPORTED_MODULE_2__ = __nccwpck_require__(127);
+/* harmony import */ var _actions_github__WEBPACK_IMPORTED_MODULE_3__ = __nccwpck_require__(134);
 
 
 
 
 
-
-const __dirname = (0,path__WEBPACK_IMPORTED_MODULE_1__.dirname)((0,url__WEBPACK_IMPORTED_MODULE_2__.fileURLToPath)("file:///Users/borkdude/temp/nbb-action-example/index.mjs"));
+const __dirname = (0,path__WEBPACK_IMPORTED_MODULE_1__.dirname)(".");
 const theFile = __nccwpck_require__.ab + "action.cljs";
 const { action } = await (0,nbb__WEBPACK_IMPORTED_MODULE_0__/* .loadFile */ .x)(__nccwpck_require__.ab + "action.cljs");
-action(/*#__PURE__*/ (_actions_core__WEBPACK_IMPORTED_MODULE_3___namespace_cache || (_actions_core__WEBPACK_IMPORTED_MODULE_3___namespace_cache = __nccwpck_require__.t(_actions_core__WEBPACK_IMPORTED_MODULE_3__, 2))),/*#__PURE__*/ (_actions_github__WEBPACK_IMPORTED_MODULE_4___namespace_cache || (_actions_github__WEBPACK_IMPORTED_MODULE_4___namespace_cache = __nccwpck_require__.t(_actions_github__WEBPACK_IMPORTED_MODULE_4__, 2))));
+action(/*#__PURE__*/ (_actions_core__WEBPACK_IMPORTED_MODULE_2___namespace_cache || (_actions_core__WEBPACK_IMPORTED_MODULE_2___namespace_cache = __nccwpck_require__.t(_actions_core__WEBPACK_IMPORTED_MODULE_2__, 2))),/*#__PURE__*/ (_actions_github__WEBPACK_IMPORTED_MODULE_3___namespace_cache || (_actions_github__WEBPACK_IMPORTED_MODULE_3___namespace_cache = __nccwpck_require__.t(_actions_github__WEBPACK_IMPORTED_MODULE_3__, 2))));
 
 __webpack_handle_async_dependencies__();
 }, 1);
