@@ -18,7 +18,7 @@ dependencies are required, this is done in the `index.mjs` wrapper and not
 inside the `action.cljs` script. The dependencies are then passed as parameters
 into a function defined in `action.cljs`.
 
-Because Github actions uses an old version of Node.js (12) (see
+Because Github actions uses an old version of Node.js (12, see
 [issue](https://github.com/actions/runner/issues/772)), the action currently
 uses a workaround in `run.cjs`: it forks to the system-wide installed version of
 Node.js which is `14.17.6` at this time of writing.
