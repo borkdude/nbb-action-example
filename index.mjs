@@ -4,6 +4,6 @@ import * as actionsCore from '@actions/core';
 import * as actionsGithub from '@actions/github';
 
 const __dirname = dirname(".");
-const theFile = resolve(__dirname,'action.cljs');
+const theFile = resolve(__dirname, 'action.cljs');
 const { action } = await loadFile(theFile);
-action(actionsCore,actionsGithub);
+action( { actionsCore, actionsGithub} );
