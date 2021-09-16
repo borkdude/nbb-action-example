@@ -6,5 +6,6 @@ import * as actionsGithub from '@actions/github';
 
 const __dirname = dirname(".");
 const theFile = resolve(__dirname,'action.cljs');
+console.log('running file', theFile);
 const { action } = await loadFile(theFile);
 action(actionsCore,actionsGithub);
