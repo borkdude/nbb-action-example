@@ -1,3 +1,7 @@
 import { loadFile } from 'nbb';
-const { action } = await loadFile('./action.cljs');
+import { resolve, dirname } from 'path';
+
+const __dirname = dirname(".");
+const theFile = resolve(__dirname, 'action.cljs');
+const { action } = await loadFile(theFile);
 action();
