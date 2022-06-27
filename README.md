@@ -10,6 +10,8 @@ It was created using
 tutorial but instead of JavaScript it uses a small JS wrapper `index.mjs` + the
 actual CLJS script `action.cljs`.
 
+## Dependencies
+
 Actions expect their dependencies to be checked into source control. JavaScript
 actions usually do this through a bundler like `ncc` which relies on analysis
 and applies tree-shaking. This approach doesn't work well with nbb: since it's
