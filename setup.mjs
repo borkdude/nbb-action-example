@@ -9,4 +9,4 @@ const theFile = resolve(__dirname, 'node_modules.zip');
 
 execSync(`ls -la ${__dirname}`, {stdio: 'inherit'});
 
-execSync(`unzip -o node_modules.zip -d ${__dirname}`, {stdio: 'inherit'});
+execSync(`unzip -o ${__dirname}/node_modules.zip -d ${__dirname}`, {stdio: 'inherit'});
