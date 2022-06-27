@@ -1,15 +1,9 @@
-import { execSync } from 'child_process';
+import { loadFile } from 'nbb';
+import { resolve, dirname } from 'path';
+import * as actionsCore from '@actions/core';
+import * as actionsGithub from '@actions/github';
 
-execSync('ls -la', {stdio: 'inherit'});
-
-execSync('unzip -o node_modules.zip', {stdio: 'inherit'});
-
-// import { loadFile } from 'nbb';
-// import { resolve, dirname } from 'path';
-// import * as actionsCore from '@actions/core';
-// import * as actionsGithub from '@actions/github';
-
-// const __dirname = dirname(".");
-// const theFile = resolve(__dirname, 'action.cljs');
-// const { action } = await loadFile(theFile);
-// action( { actionsCore, actionsGithub} );
+const __dirname = dirname(".");
+const theFile = resolve(__dirname, 'action.cljs');
+const { action } = await loadFile(theFile);
+action( { actionsCore, actionsGithub} );

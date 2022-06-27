@@ -1,5 +1,10 @@
 import { execSync } from 'child_process';
 
-execSync('ls -la', {stdio: 'inherit'});
+import { resolve, dirname } from 'path';
 
-execSync('unzip -o node_modules.zip', {stdio: 'inherit'});
+const __dirname = dirname(".");
+const theFile = resolve(__dirname, 'node_modules.zip');
+
+execSync(`ls -la ${__dirname}`, {stdio: 'inherit'});
+
+execSync(`unzip -o node_modules.zip ${__dirname}`, {stdio: 'inherit'});
