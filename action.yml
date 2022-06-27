@@ -10,5 +10,5 @@ outputs:
     description: 'The time we greeted you'
 runs:
   using: 'node16'
-  pre: 'setup.mjs'
-  main: 'index.mjs'
+  pre: 'dist/setup.mjs'
+  main: 'dist/index.mjs'
