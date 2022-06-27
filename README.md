@@ -13,12 +13,12 @@ actual CLJS script `action.cljs`.
 ## Dependencies
 
 Actions expect their dependencies to be checked into source control. JavaScript
-actions usually do this through a bundler like `ncc` which relies on analysis
-and applies tree-shaking. This approach doesn't work well with nbb: since it's
-an interpreter, you cannot see statically which libraries are used. Instead, to
+actions usually do this through a bundler like `ncc` which performs analysis and
+tree-shaking. This approach doesn't work well with nbb: since it's an
+interpreter, you cannot see statically which libraries are used. Instead, to
 bundle the node dependencies, they are archived into a `.zip` file and stored in
-the `dist` folder. Upon action execution, they are unzipped just in
-time. Run `bb build` to update `dist/node_modules.zip`.
+the `dist` folder. Upon action execution, they are unzipped just in time. Run
+`bb build` to update `dist/node_modules.zip`.
 
 ## Inputs
 
