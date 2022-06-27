@@ -10,14 +10,6 @@ It was created using
 tutorial but instead of JavaScript it uses a small JS wrapper `index.mjs` + the
 actual CLJS script `action.cljs`.
 
-All JS dependencies, including nbb, are compiled into a single file,
-`dist/index.mjs`, using [ncc](https://github.com/vercel/ncc/). This is
-recommended in the Github docs as an alternative to commiting your
-`node_modules` into git. Because `ncc` needs to statically know which
-dependencies are required, this is done in the `index.mjs` wrapper and not
-inside the `action.cljs` script. The dependencies are then passed as parameters
-into a function defined in `action.cljs`.
-
 Because Github actions uses an old version of Node.js (12, see
 [issue](https://github.com/actions/runner/issues/772)), the action currently
 uses a workaround in `run.cjs`: it forks to the system-wide installed version of
