@@ -15,10 +15,15 @@ actual CLJS script `action.cljs`.
 Actions expect their dependencies to be checked into source control. JavaScript
 actions usually do this through a bundler like `ncc` which performs analysis and
 tree-shaking. This approach doesn't work well with nbb: since it's an
-interpreter, you cannot see statically which libraries are used. Instead, to
-bundle the node dependencies, they are archived into a `.zip` file and stored in
-the `dist` folder. Upon action execution, they are unzipped just in time. Run
-`bb build` to update `dist/node_modules.zip`.
+interpreter, you cannot see statically which libraries are used.
+
+Instead, the approach taken in this example is to zip the `node_modules`
+directory and upload it to Github Releases. This is done by taking the version
+from `package.json`, creating a pre-release for it and upload the zip file
+there. Once you're ready to release a new version for the public, you just flip
+the switch of the pre-release to release. The node modules are uploaded through
+the `bb update-deps` task and requires a valid `GITHUB_TOKEN` to be set with
+repository access.
 
 Alternatively you can just call `npm install` before the action runs. In that case, replace `setup.mjs` with:
 
