@@ -37,6 +37,9 @@ execSync(`npm install`, {
 The trade-off here is that the action will take longer to start but you don't
 have to check in your dependencies into source control.
 
+Another alternative is to upload `node_modules.zip` to Github Releases. This is
+demonstrated in [this commit](0fa0a010864db4814b0b3f6a4c6a58f151ec5d98).
+
 ## Inputs
 
 ## `who-to-greet`
