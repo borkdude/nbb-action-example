@@ -7,6 +7,10 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const node_modules = resolve(__dirname, 'node_modules.zip');
 
-execSync(`curl -sLO https://github.com/borkdude/nbb-action-example/releases/download/v0.1.0/node_modules.zip`, {stdio: 'inherit'});
+execSync(`curl -sLO https://github.com/borkdude/nbb-action-example/releases/download/v0.1.0/node_modules.zip`, {
+  cwd: __dirname,
+  stdio: 'inherit'});
 
-execSync(`unzip -o ${node_modules} -d ${__dirname}`, {stdio: 'inherit'});
+execSync(`unzip ${node_modules}`, {
+  cwd: __dirname,
+  stdio: 'inherit'});
