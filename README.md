@@ -20,6 +20,23 @@ bundle the node dependencies, they are archived into a `.zip` file and stored in
 the `dist` folder. Upon action execution, they are unzipped just in time. Run
 `bb build` to update `dist/node_modules.zip`.
 
+Alternatively you can just call `npm install` before the action runs. In that case, replace `setup.mjs` with:
+
+``` javascript
+import { execSync } from 'child_process';
+import { resolve, dirname } from 'path';
+import { fileURLToPath } from 'url';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
+execSync(`npm install`, {
+  cwd: __dirname,
+  stdio: 'inherit'});
+```
+
+The trade-off here is that the action will take longer to start but you don't
+have to check in your dependencies into source control.
+
 ## Inputs
 
 ## `who-to-greet`
