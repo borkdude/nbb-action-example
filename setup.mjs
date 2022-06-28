@@ -7,6 +7,10 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 // const node_modules = resolve(__dirname, 'dist/node_modules.zip');
 
+execSync(`ls -la`, {
+  dir: __dirname,
+  stdio: 'inherit'});
+
 execSync(`npm install`, {
-  //dir: __dirname,
+  dir: __dirname,
   stdio: 'inherit'});
