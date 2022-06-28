@@ -11,6 +11,6 @@ execSync(`curl -sLO https://github.com/borkdude/nbb-action-example/releases/down
   cwd: __dirname,
   stdio: 'inherit'});
 
-execSync(`unzip ${node_modules}`, {
+execSync(`unzip -q ${node_modules}`, {
   cwd: __dirname,
   stdio: 'inherit'});
