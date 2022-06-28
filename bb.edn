@@ -1,5 +1,22 @@
 {:tasks
- {:requires ([babashka.fs :as fs])
-  build (do
-          (shell "npm install")
-          (fs/zip "dist/node_modules.zip" ["node_modules"]))}}
+ {:requires ([babashka.fs :as fs]
+             [cheshire.core :as json])
+  modules-version (-> (json/parse-string (slurp "package.json") true)
+                      :version)
+  update-deps {:extra-deps {io.github.borkdude/gh-release-artifact
+                            {:git/sha "cf082df46a648178d1904e9cbcb787d8136a35c6"}}
+               :requires ([borkdude.gh-release-artifact :as ghr])
+               :depends [modules-version]
+               :task
+               (do
+                 (shell "npm install")
+                 (fs/zip "node_modules.zip" ["node_modules"])
+                 (let [{:keys [browser_download_url]}
+                       (ghr/overwrite-asset {:org "borkdude"
+                                             :repo "nbb-action-example"
+                                             :file "node_modules.zip"
+                                             :draft false
+                                             :prerelease true
+                                             :tag (str "v" modules-version)})]
+                   (println browser_download_url)))}
+  }}

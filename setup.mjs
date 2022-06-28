@@ -7,7 +7,11 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const node_modules = resolve(__dirname, 'node_modules.zip');
 
-execSync(`curl -sLO https://github.com/borkdude/nbb-action-example/releases/download/v0.1.0/node_modules.zip`, {
+import pkg from './package.json' assert {type: "json"};;
+
+const version = pkg.version;
+
+execSync(`curl -sLO https://github.com/borkdude/nbb-action-example/releases/download/v${version}/node_modules.zip`, {
   cwd: __dirname,
   stdio: 'inherit'});
 
