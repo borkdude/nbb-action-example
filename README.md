@@ -20,10 +20,13 @@ npm run action
 
 to run the action locally.
 
-## Distribution
+## Bundle
 
 To bundle `action.cljs` using `ncc`, run: `npm run bundle`.
 This will create the file `dist/index.mjs`.
+
+See [bundle](https://github.com/babashka/nbb/tree/main/doc/bundle) for more
+details.
 
 ## Inputs
 
