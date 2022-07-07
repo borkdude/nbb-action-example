@@ -59,7 +59,3 @@ jobs:
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
 ```
-
-## Develop
-
-See `bb tasks` for relevant tasks for development.
