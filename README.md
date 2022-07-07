@@ -10,35 +10,20 @@ It was created using
 tutorial but instead of JavaScript it uses a small JS wrapper `index.mjs` + the
 actual CLJS script `action.cljs`.
 
-## Dependencies
+## Running locally
 
-Actions expect their dependencies to be checked into source control. JavaScript
-actions usually do this through a bundler like `ncc` which performs analysis and
-tree-shaking. This approach doesn't work well with nbb: since it's an
-interpreter, you cannot see statically which libraries are used. Instead, to
-bundle the node dependencies, they are archived into a `.zip` file and stored in
-the `dist` folder. Upon action execution, they are unzipped just in time. Run
-`bb build` to update `dist/node_modules.zip`.
+Run:
 
-Alternatively you can just call `npm install` before the action runs. In that case, replace `setup.mjs` with:
-
-``` javascript
-import { execSync } from 'child_process';
-import { resolve, dirname } from 'path';
-import { fileURLToPath } from 'url';
-
-const __dirname = dirname(fileURLToPath(import.meta.url));
-
-execSync(`npm install`, {
-  cwd: __dirname,
-  stdio: 'inherit'});
+``` shell
+npm run action
 ```
 
-The trade-off here is that the action will take longer to start but you don't
-have to check in your dependencies into source control.
+to run the action locally.
 
-Another alternative is to upload `node_modules.zip` to Github Releases. This is
-demonstrated in [this commit](https://github.com/borkdude/nbb-action-example/commit/0fa0a010864db4814b0b3f6a4c6a58f151ec5d98).
+## Distribution
+
+To bundle `action.cljs` using `ncc`, run: `npm run bundle`.
+This will create the file `dist/index.mjs`.
 
 ## Inputs
 

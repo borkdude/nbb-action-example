@@ -1,3 +1,4 @@
 /node_modules
 /.lsp
 /.clj-kondo/.cache
+out.mjs

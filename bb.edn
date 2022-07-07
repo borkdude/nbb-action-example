@@ -1,5 +1,0 @@
-{:tasks
- {:requires ([babashka.fs :as fs])
-  build (do
-          (shell "npm install")
-          (fs/zip "dist/node_modules.zip" ["node_modules"]))}}
