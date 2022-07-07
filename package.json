@@ -7,7 +7,7 @@
   "scripts": {
     "action": "nbb action.cljs",
     "prebundle": "nbb bundle action.cljs -o out.mjs",
-    "bundle": "ncc build out.mjs"
+    "bundle": "ncc build out.mjs -m"
   },
   "repository": {
     "type": "git",
